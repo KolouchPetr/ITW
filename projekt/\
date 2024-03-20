@@ -1,0 +1,153 @@
+/*
+ * Login: xkolou05
+ *
+ * Doplnte sve reseni.
+ *
+ * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
+ * a pro netrivialni useky kodu.
+ *
+ * Snazte se dodat aspon castecne reseni, i snaha se hodnoti.
+ */
+
+/* Globalni pravidla */
+
+body {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 768px;
+  background-image: url("../img/bg/bg-header.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow-x: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Textile";
+  src: url("../fonts/textile.ttf") format("truetype");
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#header-title {
+  order: 1;
+  font-family: "Calistoga", sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  margin-top: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px green;
+}
+
+#header-title span {
+  display: block;
+}
+
+#header-title span:nth-child(1) {
+  font-size: 120px;
+  margin-bottom: -50px;
+}
+
+#header-title span:nth-child(2) {
+  font-size: 60px;
+}
+
+#header-title span:nth-child(3) {
+  font-size: 20px;
+}
+
+#header-title span:nth-child(4) {
+  font-family: "Textile", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+#header-title span:nth-child(4)::before,
+#header-title span:nth-child(4)::after {
+  content: '"';
+}
+
+#header-title span:nth-child(2)::before,
+#header-title span:nth-child(2)::after {
+  content: "";
+  background-image: url("../img/custom/flag.svg");
+  background-size: 90px 90px !important;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  position: relative;
+  top: 30px;
+}
+
+#header-title span:nth-child(2)::after {
+  transform: scaleX(-1);
+}
+
+#header-menu {
+  order: 2;
+  margin: 0;
+  margin-top: 450px;
+  padding: 0;
+  padding-top: 300px;
+  font-family: "Calistoga", sans-serif;
+  text-transform: uppercase;
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  background-image: url("../img/custom/beers.png");
+  background-repeat: repeat-x;
+}
+
+#header-menu nav {
+  padding: 25px;
+  border-top: 1px dashed green;
+  border-bottom: 1px dashed green;
+}
+
+#header-menu nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#header-menu nav ul li {
+  margin-right: 60px;
+}
+
+#header-menu nav ul li:nth-child(4) {
+  margin-left: 200px;
+}
+
+#header-menu nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+#heyoooo {
+  position: absolute;
+  top: 1150px;
+}
+
+#heyoooo img {
+  width: 50%;
+  transform: scaleX(-1) rotate(-90deg);
+}
+
+#heyoooo div {
+  display: none;
+}

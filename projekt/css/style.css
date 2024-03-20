@@ -1,0 +1,658 @@
+/*
+ * Login: xkolou05
+ *
+ * Doplnte sve reseni.
+ *
+ * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
+ * a pro netrivialni useky kodu.
+ *
+ * Snazte se dodat aspon castecne reseni, i snaha se hodnoti.
+ */
+
+/* Globalni pravidla */
+
+body {
+  font-family: Spectral, sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 768px;
+  background-image: url("../img/bg/bg-header.jpg"), url("../img/bg/bg-body.svg");
+  background-repeat: no-repeat, repeat;
+  background-size: contain, 500px;
+  overflow-x: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Textile";
+  src: url("../fonts/textile.ttf") format("truetype");
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#header-title {
+  order: 1;
+  font-family: "Calistoga", sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  margin-top: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px green;
+}
+
+#header-title span {
+  display: block;
+}
+
+#header-title span:nth-child(1) {
+  font-size: 120px;
+  margin-bottom: -50px;
+}
+
+#header-title span:nth-child(2) {
+  font-size: 60px;
+}
+
+#header-title span:nth-child(3) {
+  font-size: 20px;
+}
+
+#header-title span:nth-child(4) {
+  font-family: "Textile", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+#header-title span:nth-child(4)::before,
+#header-title span:nth-child(4)::after {
+  content: '"';
+}
+
+#header-title span:nth-child(2)::before,
+#header-title span:nth-child(2)::after {
+  content: "";
+  background-image: url("../img/custom/flag.svg");
+  background-size: 90px 90px !important;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  position: relative;
+  top: 30px;
+}
+
+#header-title span:nth-child(2)::after {
+  transform: scaleX(-1);
+}
+
+#header-menu {
+  order: 2;
+  margin: 0;
+  margin-top: 450px;
+  padding: 0;
+  padding-top: 300px;
+  font-family: "Calistoga", sans-serif;
+  text-transform: uppercase;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  background-image: url("../img/custom/beers.png");
+  background-repeat: repeat-x;
+  background-color: #fff;
+}
+
+#header-menu nav {
+  padding: 25px;
+  border-top: 1px dashed green;
+  border-bottom: 1px dashed green;
+}
+
+#header-menu nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#header-menu nav ul li {
+  margin-right: 60px;
+}
+
+#header-menu nav ul li:nth-child(4) {
+  margin-left: 150px;
+}
+
+#header-menu nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+#heyoooo {
+  position: absolute;
+  top: 1150px;
+  left: 45%;
+}
+
+#heyoooo img {
+  width: 50%;
+  transform: scaleX(-1) rotate(-90deg);
+}
+
+#heyoooo div {
+  display: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 160px;
+  background-color: #fff;
+  border-bottom: 10px solid transparent;
+  border-image: url("../img/custom/hr.svg") 30;
+}
+
+section:nth-child(odd) {
+  border-left: 1px dashed green;
+  border-right: 1px dashed green;
+}
+
+section img {
+  opacity: 0.8;
+}
+
+#about {
+  position: relative;
+}
+
+.heading h2 {
+  font-family: "Calistoga", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: green;
+  margin: 0;
+}
+
+.heading span {
+  font-family: "Textile", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  color: #000;
+}
+
+#about span.name {
+  font-size: 20px;
+  font-style: italic;
+  position: absolute;
+  bottom: -20px;
+  right: 255px;
+  margin-bottom: 20px;
+}
+
+#about ul {
+  position: absolute;
+  bottom: -55px;
+  right: 250px;
+}
+
+#about ul li {
+  padding-right: 10px;
+}
+
+.references ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  font-size: 20px;
+}
+
+.references ul li a {
+  display: none;
+}
+
+.references ul li::before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: green;
+}
+
+#team {
+  background-image: url("../img/bg/bg-team.jpg");
+  background-size: cover;
+  width: 100%;
+}
+
+#team h2 {
+  color: lightgreen;
+}
+
+#team span {
+  color: #fff;
+}
+
+#team .section-item h3 {
+  margin: 0;
+  order: 2;
+}
+
+#team .section-item .references {
+  margin: 0;
+  order: 3;
+}
+
+#team .section-item ul li {
+  padding-right: 10px;
+}
+
+#team .section-item p {
+  margin: 0;
+  order: 4;
+}
+
+#team .section-item img {
+  order: 1;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+#team .section-item {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+#team .section-content {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+#events .heading {
+  margin-bottom: 30px;
+}
+
+#events img {
+  width: 40%;
+  float: left;
+  margin-right: 20px;
+}
+
+#events .section-item:nth-child(2) > img {
+  margin-right: 0;
+  float: right;
+}
+
+#events .section-item:nth-child(1) {
+  border-bottom: 1px dotted black;
+}
+
+#events .section-item:nth-child(2) {
+  border-bottom: 1px dotted black;
+  padding-bottom: 190px;
+}
+
+#events .section-item {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#events .section-item h3,
+span,
+ul,
+p {
+  margin: 0;
+}
+
+#events .section-item h3 {
+  font-weight: bold;
+  font-family: "Calistoga", sans-serif;
+}
+
+#events .events-props {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#events .events-props span {
+  margin-right: 10px;
+}
+
+#events .events-props ul li {
+  padding-right: 10px;
+}
+
+#menu .heading h2 {
+  color: lightgreen;
+  font-size: 20px;
+}
+
+#menu .heading span {
+  color: #fff;
+  font-size: 26px;
+}
+
+#menu {
+  background-image: url("../img/bg/bg-menu.jpg");
+  background-size: cover;
+  width: 100%;
+}
+
+#menu .section-content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "cat cat chimi ham "
+    "cake charlie chimi ham"
+    "cake charlie frank frank"
+    "mac mac frank frank";
+  border: 20px solid white;
+}
+
+#menu .section-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+  opacity: 0.9;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 0px;
+}
+
+#menu .section-item .figures {
+  flex: 1;
+}
+
+#menu .section-item .description a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#menu .section-item .description span {
+  font-size: 30px;
+}
+
+#menu .section-item .description span::before {
+  content: "$";
+}
+
+#menu .section-item .description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu .section-content .figures img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#menu .section-item:nth-of-type(1) {
+  grid-area: cat;
+  flex-direction: row;
+}
+
+#menu .section-item:nth-of-type(2) {
+  grid-area: cake;
+  flex-direction: column-reverse;
+}
+
+#menu .section-item:nth-of-type(3) {
+  grid-area: frank;
+  flex-direction: row;
+}
+
+#menu .section-item:nth-of-type(3) .figures {
+  height: 50%;
+}
+
+#menu .section-item:nth-of-type(3) .figures img:nth-of-type(2) {
+  margin-top: -7px;
+}
+
+#menu .section-item:nth-of-type(4) {
+  grid-area: charlie;
+  flex-direction: column;
+}
+
+#menu .section-item:nth-of-type(5) {
+  grid-area: chimi;
+  flex-direction: column;
+}
+
+#menu .section-item:nth-of-type(6) {
+  grid-area: mac;
+  flex-direction: row-reverse;
+}
+
+#menu .section-item:nth-of-type(7) {
+  grid-area: ham;
+  flex-direction: column-reverse;
+}
+
+#menu .section-item:nth-of-type(1) .description,
+#menu .section-item:nth-of-type(3) .description,
+#menu .section-item:nth-of-type(6) .description {
+  background-color: lightgreen;
+}
+
+#menu .section-item:nth-of-type(2) .description,
+#menu .section-item:nth-of-type(5) {
+  background-color: rgb(238, 238, 238);
+}
+
+#menu .section-item:nth-of-type(4) .description,
+#menu .section-item:nth-of-type(7) .description {
+  background-color: pink;
+}
+
+#menu .section-item:nth-of-type(3) .description {
+  height: 100%;
+}
+
+#services .section-content {
+  font-family: "Calistoga", sans-serif;
+  position: relative;
+  background-color: black;
+  box-shadow: 0 0 10px 10px black;
+  width: 95%;
+  height: 100%;
+  opacity: 0.7;
+  overflow: hidden;
+}
+
+#services .heading {
+  margin-bottom: 30px;
+}
+
+#services .section-content table::after {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/gang/heisenberg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#services .section-content table tr td {
+  color: white;
+}
+
+#services .section-content table tr {
+  margin-bottom: 30px;
+}
+
+#services .section-content table tr td:nth-child(even)::after {
+  content: "$";
+  font-family: "Textile", sans-serif;
+}
+
+#services .section-content table tr td a {
+  text-decoration: none;
+  color: white;
+}
+
+#services .section-content table tr {
+  display: flex;
+}
+
+#services .section-content table tr:nth-of-type(2) td:nth-child(2)::before {
+  content: "....................................................................................";
+}
+
+#services .section-content table tr:nth-of-type(3) td:nth-child(2)::before {
+  content: "..............................................................................";
+}
+
+#services .section-content table tr:nth-of-type(4) td:nth-child(2)::before {
+  content: "...............................................................";
+}
+
+#services .section-content table tr:nth-of-type(5) td:nth-child(2)::before {
+  content: "..........................................................................................";
+}
+
+#services .section-content table tr:nth-of-type(6) td:nth-child(2)::before {
+  content: "..........................................................";
+}
+
+#services .section-content table tr:nth-of-type(7) td:nth-child(2)::before {
+  content: "..........................................................................................................";
+}
+
+#services .section-content table tr:nth-of-type(8) td:nth-child(2)::before {
+  content: "..............................................................................";
+}
+
+#services .section-content table tr:nth-of-type(8) td:nth-child(2)::after {
+  content: "";
+}
+
+#contact {
+  background-image: url("../img/bg/bg-contact.jpg");
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+
+#contact img {
+  opacity: 0.8;
+  height: 400px;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  border: 5px solid white;
+}
+
+#contact .heading h2 {
+  color: lightgreen;
+  font-size: 20px;
+}
+
+#contact .heading span {
+  color: #fff;
+  font-size: 26px;
+}
+
+#contact .section-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+}
+
+#contact blockquote,
+#contact .contact-form {
+  grid-column: 2;
+}
+
+#contact blockquote {
+  font-size: 18px;
+  background-color: white;
+  opacity: 0.8;
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+}
+
+#contact blockquote p {
+  margin-bottom: 20px;
+}
+
+#contact blockquote .references {
+  font-style: normal;
+}
+
+.contact-form {
+  text-align: center;
+  margin-right: 10px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+.contact-form input[type="submit"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  margin-bottom: 20px;
+}
+
+.contact-form input {
+  border: 5px solid white;
+  background-color: pink;
+  opacity: 0.8;
+}
+
+.contact-form textarea,
+.contact-form select {
+  border: 5px solid white;
+  background-color: lightgreen;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.contact-form input[type="submit"] {
+  width: 25%;
+  display: inline-block;
+}
